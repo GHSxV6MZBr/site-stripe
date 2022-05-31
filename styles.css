@@ -45,9 +45,9 @@ h4 {
 /* Nav */
 
 .nav {
-    /* display: none; */
+    display: none;
     position: relative;
-    width: 97%;
+    width: 94%;
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 10px;
@@ -151,4 +151,13 @@ h4 {
 .nav__btn-link:hover > .nav__btn-arrow {
     right: 13px;
     width: 7px;
+}
+
+/* Hamburger Styling */
+
+.nav:target {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
 }
