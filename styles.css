@@ -76,3 +76,9 @@ ul {
     font-weight: 500;
     color: #0a2540;
 }
+.nav__svg-icon {
+    fill: #88add2;
+}
+.nav__svg-icon:hover {
+    fill: #0a2540;
+}
