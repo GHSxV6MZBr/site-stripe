@@ -51,7 +51,7 @@ h4 {
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 10px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .nav__menu-wrapper {
     padding: 25px 25px;
@@ -65,11 +65,19 @@ h4 {
     padding-right: 0;
     padding-left: 0;
 }
+.nav__cross-container {
+    position: relative;
+}
 .nav__menu-title {
     font-size: 13px;
     font-weight: 500;
     color: #4f5b76;
     text-transform: uppercase;
+}
+.nav__cross {
+    position: absolute;
+    top: -20px;
+    right: 0;
 }
 .nav__menu {
     display: grid;
@@ -153,11 +161,11 @@ h4 {
     width: 7px;
 }
 
-/* Hamburger Styling */
+/* Target Styling */
 
 .nav:target {
     display: block;
     position: absolute;
     top: 16px;
-    left: 16px;
+    left: 3%;
 }
