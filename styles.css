@@ -15,8 +15,8 @@ ul {
     padding: 0;
     margin: 0;
 }
-h4 {
-    margin-top: 0;
+h1, h2, h3, h4, p {
+    margin: 0;
 }
 
 /* Header */
@@ -129,6 +129,8 @@ h4 {
     font-weight: 500;
     color: #fff;
     padding: 7px 30px 7px 15px;
+    border-width: 1px;
+    border-style: solid;
     border-radius: 16px;
 }
 .btn-link--purple {
@@ -190,14 +192,21 @@ h4 {
 
 /* Section One */
 
+.section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
 h1 {
     font-size: 60px;
+    color: #3a3a3a;
+    line-height: 4rem;
 }
 h3 {
-    font-weight: 300;
-}
-.h3--margin {
-    margin: 40px 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #425466;
+    line-height: 28px;
 }
 .btn-link--dark {
     background-color: #0a2540;
@@ -220,13 +229,37 @@ h3 {
 .btn-link__arrow--black::before, .btn-link__arrow--black::after {
     background-color: #0a2540;
 }
-.section__container {
+.section__svg-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 50px;
     row-gap: 50px;
-    margin: 100px 0 80px;
+    margin: 80px 0 80px;
 }
 .svg__logo {
     width: 150px;
+}
+
+/* Section Two */
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.h3--purple {
+    color: #635bff;
+}
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #0a2540;
+}
+p {
+    font-size: 18px;
+    color: #425466;
+    line-height: 28px;
+}
+.link--bold {
+    font-weight: 500;
+    color: #635bff;
 }
