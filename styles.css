@@ -7,6 +7,10 @@ html {
     background-color: grey;
 }
 
+body {
+    margin: 0;
+    padding: 0 15px;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -21,7 +25,7 @@ h4 {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 .header__logo-link:hover .header__logo {
     opacity: 0.6;
@@ -52,6 +56,7 @@ h4 {
     border: 1px solid #fff;
     border-radius: 10px;
     /* margin: 0 auto; */
+    z-index: 1;
 }
 .nav__menu-wrapper {
     padding: 25px 25px;
@@ -117,48 +122,55 @@ h4 {
     border-radius: 10px;
     margin: 0 2px 2px;
 }
-.nav__btn-link {
+.btn-link {
     position: relative;
     height: 35px;
     font-size: 15px;
     font-weight: 500;
     color: #fff;
-    background-color: #635bff;
     padding: 7px 30px 7px 15px;
-    border: 1px solid #635bff;
     border-radius: 16px;
 }
-.nav__btn-link:hover {
-    background-color: #0a2540;
+.btn-link--purple {
+    background-color: #635bff;
+    border-color: #635bff;
 }
-.nav__btn-arrow {
+.btn-link--purple:hover {
+    background-color: #0a2540;
+    border: 1px solid #0a2540;
+}
+.btn-link__arrow {
     position: absolute;
     top: 16px;
     right: 15px;
     width: 0px;
     height: 2px;
-    background-color: #fff;
     transition: right 0.1s;
 }
-.nav__btn-arrow::before, .nav__btn-arrow::after {
+.btn-link__arrow::before, .btn-link__arrow::after {
     content: '';
     position: absolute;
     right: -2px;
     width: 6px;
     height: 2px;
-    background-color: #fff;
 }
-.nav__btn-arrow::before {
+.btn-link__arrow::before {
     top: -2px;
     transform: rotate(45deg);
 }
-.nav__btn-arrow::after {
+.btn-link__arrow::after {
     bottom: -2px;
     transform: rotate(135deg);
 }
-.nav__btn-link:hover > .nav__btn-arrow {
+.btn-link:hover > .btn-link__arrow {
     right: 13px;
     width: 7px;
+}
+.btn-link__arrow--white {
+    background-color: #fff;
+}
+.btn-link__arrow--white::before, .btn-link__arrow--white::after {
+    background-color: #fff;
 }
 
 /* Target Styling */
@@ -168,4 +180,43 @@ h4 {
     position: absolute;
     top: 16px;
     left: 3%;
+}
+
+/* Main */
+
+.main {
+    padding: 0 15px;
+}
+
+/* Section One */
+
+h1 {
+    font-size: 60px;
+}
+h3 {
+    font-weight: 300;
+}
+.h3--margin {
+    margin: 40px 0;
+}
+.btn-link--dark {
+    background-color: #0a2540;
+    border-color: #0a2540;
+}
+.btn-link--dark:hover {
+    opacity: 0.6;
+}
+.btn-link--white {
+    color: #0a2540;
+    background-color: #fff;
+    border-color: #fff;
+}
+.btn-link--white:hover {
+    opacity: 0.6;
+}
+.btn-link__arrow--black {
+    background-color: #0a2540;
+}
+.btn-link__arrow--black::before, .btn-link__arrow--black::after {
+    background-color: #0a2540;
 }
