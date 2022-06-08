@@ -12,7 +12,7 @@ ul {
     padding: 0;
     margin: 0;
 }
-h4 {
+h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
@@ -21,21 +21,27 @@ h4 {
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    background-color: transparent;    
 }
-.header__logo-link:hover .header__logo {
+.logo {
+    fill: #fff;
+    transition: all 0.1s;
+}
+.logo-link:hover > .logo {
     opacity: 0.6;
 }
-.header__logo {
-    fill: #fff;
-}
-.header__link {
-    padding: 4px 15px 5px;
+.header__hamburger-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 2em;
     background-color: #fff3;
     border: 1px solid transparent;
     border-radius: 15px;
+    transition: all 0.1s;
 }
-.header__link:hover {
+.header__hamburger-link:hover {
     background-color: #fff6;
 }
 .header__hamburger {
