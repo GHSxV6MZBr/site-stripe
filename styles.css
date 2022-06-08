@@ -6,7 +6,9 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: grey;
 }
-
+body {
+    margin: 0;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -21,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     display: flex;
     justify-content: space-between;
+    position: relative;
     background-color: transparent;    
 }
 .logo {
@@ -46,6 +49,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header__hamburger {
     fill: #fff;
+}
+.header__gradient {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(-8deg, #a960ee, #ff333d, #90e0ff, #ffcb57, #a960ee);
+    background-size: 400% 100%;
+    animation: animateBg 20s linear infinite;
+}
+@keyframes animateBg {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }
 
 /* Nav */
