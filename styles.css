@@ -23,17 +23,18 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    background-color: transparent;    
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
 }
 .logo {
     fill: #fff;
     transition: all 0.1s;
 }
-.logo-link:hover > .logo {
+.link-logo:hover > .logo {
     opacity: 0.6;
 }
-.header__hamburger-link {
+.header__link-hamburger {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,28 +45,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 15px;
     transition: all 0.1s;
 }
-.header__hamburger-link:hover {
+.header__link-hamburger:hover {
     background-color: #fff6;
 }
 .header__hamburger {
     fill: #fff;
-}
-.header__gradient {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 400px;
-    background-image: linear-gradient(-8deg, #a960ee, #ff333d, #90e0ff, #ffcb57, #a960ee);
-    background-size: 400% 100%;
-    animation: animateBg 20s linear infinite;
-}
-@keyframes animateBg {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
 }
 
 /* Nav */
@@ -77,17 +61,16 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 10px;
-    /* margin: 0 auto; */
 }
-.nav__menu-wrapper {
+.nav__menu-container {
     padding: 25px 25px;
     border-bottom: 1px dashed #42477017;
 }
-.nav__menu-wrapper:nth-child(4), .nav__menu-wrapper:last-child {
+.nav__menu-container:nth-child(4), .nav__menu-container:last-child {
     border-bottom: none;
     padding-bottom: 0;
 }
-.nav__menu-wrapper:last-child {
+.nav__menu-container:last-child {
     padding-right: 0;
     padding-left: 0;
 }
@@ -111,13 +94,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-auto-rows: 30px;
     align-items: center;
 }
-.link {
-    text-decoration: none;
-}
 .nav__link {
     display: grid;
     grid-template-columns: 1fr 7fr;
     align-items: center;
+    text-decoration: none;
 }
 .nav__svg {
     width: 15px;
@@ -143,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     margin: 0 2px 2px;
 }
-.nav__btn-link {
+/* .nav__btn-link {
     position: relative;
     height: 35px;
     font-size: 15px;
@@ -156,8 +137,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav__btn-link:hover {
     background-color: #0a2540;
+} */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.4em;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1.2em;
+    transition: all 0.1s;
 }
-.nav__btn-arrow {
+.btn-bg {
+    padding: 0 10px 1px 15px;
+}
+.btn-bg--purple {
+    background-color: #635bff;
+}
+.btn-bg--purple:hover {
+    background-color: #0a2540;
+}
+.btn__arrow {
+    position: relative;
+    top: 1px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    margin-left: 12px;
+}
+.btn__line {
+    opacity: 0;
+    transition: all 0.1s;
+}
+.btn__tip {
+    transition: all 0.1s;
+}
+.btn:hover .btn__line {
+    opacity: 1;
+}
+.btn:hover .btn__tip {
+    transform: translateX(3px);
+}
+
+/* .nav__btn-arrow {
     position: absolute;
     top: 16px;
     right: 15px;
@@ -185,7 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav__btn-link:hover > .nav__btn-arrow {
     right: 13px;
     width: 7px;
-}
+} */
 
 /* Target Styling */
 
@@ -194,4 +221,14 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 16px;
     left: 3%;
+}
+
+.header__gradient {
+    position: absolute;
+    top: -18%;
+    z-index: -1;
+    width: 100%;
+    height: 65%;
+    background-image: linear-gradient(#a960ee, #ff333d, #90e0ff, #ffcb57);
+    transform: skewY(-12deg);
 }
