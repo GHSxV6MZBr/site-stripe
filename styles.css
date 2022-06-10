@@ -258,6 +258,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     text-decoration: none;
     color: #635bff;
+    transition: all 0.2s;
 }
 .copy__link:hover {
     color: #0a2540;
@@ -317,4 +318,17 @@ h1, h2, h3, h4, h5, h6 {
 .section__code-animation {
     height: 800px;
     background-color: #000;
+}
+
+/* Section Five */
+
+.link--blue {
+    color: #00d4ff;
+}
+.link--blue:hover {
+    color: #fff;
+}
+.heading-data {
+    font-size: 2em;
+    color: #fff;
 }
