@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 2px 2px;
 }
 .btn {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 2.6em;
@@ -137,12 +137,10 @@ h1, h2, h3, h4, h5, h6 {
     border-width: 1px;
     border-style: solid;
     border-radius: 1.2em;
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 .btn-bg {
     padding: 0 10px 1px 15px;
-    transition: all 0.2s;
-
 }
 .btn-bg--purple {
     background-color: #635bff;
@@ -208,14 +206,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-bg--black {
     background-color: #0a2540;
+    border-color: #0a2540;
 }
 .btn-bg--black:hover {
     opacity: 0.6;
 }
 .btn-open {
-    border-color: transparent;
-    transition: all 0.2s;
-}
+    border-color: transparent;}
 .btn-open--black {
     color: #0a2540;
 }
@@ -230,4 +227,43 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5em;
     row-gap: 5em;
+}
+
+/* Section Two */
+
+.section__heading {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.section__heading--purple {
+    color: #635bff;
+}
+.heading-content {
+    font-size: 2.8em;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+.heading-content--black {
+    color: #0a2540;
+}
+.copy {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+.copy--black {
+    color: #425466;
+}
+.copy__link {
+    font-weight: 500;
+    text-decoration: none;
+    color: #635bff;
+}
+.copy__link:hover {
+    color: #0a2540;
+}
+.section__img-container {
+    width: 1100px;
+    height: 600px;
+    background-color: #000;
 }
