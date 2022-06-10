@@ -199,11 +199,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     color: #425466;
 }
-.section__btn-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-}
 .btn-bg--black {
     background-color: #0a2540;
     border-color: #0a2540;
@@ -218,6 +213,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-open--black:hover {
     opacity: 0.6;
+}
+.btn-open--padding {
+    padding-left: 15px;
 }
 .btn__arrow--black {
     stroke: #0a2540;
@@ -260,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #635bff;
     transition: all 0.2s;
 }
-.copy__link:hover {
+.link:hover {
     color: #0a2540;
 }
 .section__img-container {
@@ -331,4 +329,22 @@ h1, h2, h3, h4, h5, h6 {
 .heading-data {
     font-size: 2em;
     color: #fff;
+}
+
+/* Section Six */
+
+.heading-action {
+    font-size: 2em;
+}
+.btn-open--purple {
+    color: #635bff;
+}
+.btn-open--purple:hover {
+    color: #0a2540;
+}
+.btn__arrow--purple {
+    stroke: #635bff;
+}
+.btn-open--purple:hover .btn__arrow--purple {
+    stroke: #0a2540;
 }
