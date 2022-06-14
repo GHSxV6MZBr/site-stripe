@@ -388,13 +388,36 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* Footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+}
+.footer__localisations {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-between;
+    gap: 8px;
+}
+.footer__devco {
+    display: grid;
+    justify-content: space-between;
+}
+.footer__useres {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .logo--black {
     fill: #000;
 }
 .footer__link {
+    display: inline-block;
     font-size: 1.2em;
     color: #0a2540;
     text-decoration: none;
+    margin: 4px 0;
 }
 
 /* Location Popup */
@@ -479,6 +502,7 @@ h1, h2, h3, h4, h5, h6, p {
 .footer__menu-title {
     font-size: 1.2em;
     font-weight: 600;
+    margin-bottom: 10px;
 }
 li .footer__link:hover {
     color: #0a2540;
