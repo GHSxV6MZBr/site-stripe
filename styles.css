@@ -287,13 +287,22 @@ h1, h2, h3, h4, h5, h6, p {
     position: absolute;
     left: 0;
     z-index: -1;
-    width: 1100px;
-    height: 600px;
+    width: 896px;
+    height: 732px;
     background-color: #000;
 }
 
 /* Section Three */
 
+.section--blue {
+    background-color: #0a2540;
+}
+.section--skewed {
+    transform: skewY(-6.5deg);
+}
+.section--skewed > * {
+    transform: skewY(6.5deg);
+}
 .section__heading--blue {
     color: #00d4ff;
 }
@@ -311,6 +320,10 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-bg__blue:hover {
     background-color: #fff;
     border-color: #fff;
+}
+.section-small {
+    display: grid;
+    gap: 10px;
 }
 .heading-small {
     font-size: 1.2em;
@@ -338,8 +351,8 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-open--blue:hover .btn__arrow--blue {
     stroke: #fff;
 }
-.section__code-animation {
-    height: 800px;
+.code-animation {
+    height: 655px;
     background-color: #000;
 }
 
